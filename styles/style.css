@@ -177,3 +177,77 @@ header {
 }
   
 /* Write your CSS below */
+/*Iteration 1 | Mobile Screens (width < 760px)*/
+@media screen and (max-width: 760px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .articles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-article .image,
+  .main-article .content {
+    width: 100%;
+  }
+}
+
+/*Iteration 2 | Small Screens (width > 760px and width < 1024px)*/
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar li {
+    width: auto;
+    border-right: 1px solid #ffffff;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .articles-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-article {
+    flex-direction: row;
+  }
+
+  .main-article .image {
+    width: 50%;
+  }
+
+  .main-article .content {
+    width: 50%;
+  }
+
+  .article {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+/*Iteration 3 | Small Mobile Screens (width < 480px)*/
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }  
+}
+
